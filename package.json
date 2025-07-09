@@ -1,0 +1,25 @@
+{
+	"name": "speakertimer_controller",
+	"version": "0.1.0",
+	"main": "main.js",
+	"author": "Gareth Risdale",
+	"scripts": {
+		"format": "prettier -w .",
+		"package": "companion-module-build"
+	},
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/bitfocus/companion-module-attend2it-speakertimer.git"
+	},
+	"dependencies": {
+		"@companion-module/base": "~1.11.3",
+		"socket.io-client": "^4.8.1"
+	},
+	"devDependencies": {
+		"@companion-module/tools": "^2.3.0",
+		"prettier": "^3.5.3"
+	},
+	"prettier": "@companion-module/tools/.prettierrc.json",
+	"packageManager": "yarn@4.9.1"
+}

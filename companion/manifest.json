@@ -3,7 +3,7 @@
 	"name": "attend2it-speakertimer",
 	"shortname": "SpeakerTimer",
 	"description": "A module to control speakertimer.co.uk online timers",
-	"version": "0.0.1",
+	"version": "0.0.0",
 	"license": "MIT",
 	"repository": "git+https://github.com/bitfocus/companion-module-attend2it-speakertimer.git",
 	"bugs": "https://github.com/bitfocus/companion-module-attend2it-speakertimer/issues",
@@ -22,5 +22,5 @@
 	"legacyIds": [],
 	"manufacturer": "Attend2IT",
 	"products": ["Speakertimer.co.uk"],
-	"keywords": []
+	"keywords": ["timer", "speakertimer", "countdown"]
 }

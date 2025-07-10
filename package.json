@@ -1,6 +1,6 @@
 {
-	"name": "speakertimer_controller",
-	"version": "0.1.0",
+	"name": "attend2it-speakertimer",
+	"version": "1.0.0",
 	"main": "main.js",
 	"author": "Gareth Risdale",
 	"scripts": {

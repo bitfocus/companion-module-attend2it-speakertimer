@@ -9,7 +9,7 @@ module.exports = function (self) {
 					return;
 				}
 				self.socket.emit('update state', 'CountDown')
-				self.log('info', '▶️ Sent Start CountDown')
+				self.log('debug', '▶️ Sent Start CountDown')
 			},
 			},
 
@@ -21,7 +21,7 @@ module.exports = function (self) {
 					return;
 				} 
 				self.socket.emit('update state', 'Stop')
-				self.log('info', '▶️ Sent Stop')
+				self.log('debug', '▶️ Sent Stop')
 			},
 		},
 
@@ -33,7 +33,7 @@ module.exports = function (self) {
 					return;
 				}
 				self.socket.emit('update state', 'Clock')
-				self.log('info', '▶️ Sent Clock (show clock time)')
+				self.log('debug', '▶️ Sent Clock (show clock time)')
 			},
 		},
 
@@ -45,7 +45,7 @@ module.exports = function (self) {
 					return;
 				};
 				self.socket.emit('update state', 'CountUp');
-				self.log('info', '▶️ Sent Start CountUp');
+				self.log('debug', '▶️ Sent Start CountUp');
 			},
 		},
 
@@ -94,7 +94,7 @@ module.exports = function (self) {
 
 				if (action.options.action === 'stop') {
 					self.socket.emit('update state', 'Stop')
-					self.log('info', '▶️ Sent Stop on Set')
+					self.log('debug', '▶️ Sent Stop on Set')
 				}
 
 				self.socket.emit('set time', totalSeconds)
@@ -103,7 +103,7 @@ module.exports = function (self) {
 					self.socket.emit('update state', 'CountDown')
 				}
 
-				self.log('info',`▶️ Sent Set Time ${totalSeconds}s (${minutes}m ${seconds}s)`)
+				self.log('debug',`▶️ Sent Set Time ${totalSeconds}s (${minutes}m ${seconds}s)`)
 			},
 		},
 
@@ -147,7 +147,7 @@ module.exports = function (self) {
 				}
 
 				self.socket.emit('set options', {"yellowAt":action.options.yellow, "redAt":action.options.orange, "flashAt":action.options.red});
-				self.log('info', `▶️ Sent Colours: {"yellowAt":${action.options.yellow}, "redAt":${action.options.orange}, "flashAt":${action.options.red}}`);
+				self.log('debug', `▶️ Sent Colours: {"yellowAt":${action.options.yellow}, "redAt":${action.options.orange}, "flashAt":${action.options.red}}`);
 			},
 		},
 
@@ -192,7 +192,7 @@ module.exports = function (self) {
 			
 				self.socket.emit('set time', totalSeconds)
 				self.socket.emit('update state', 'CountDown')
-				self.log('info', `▶️ Sent Set Time to Countdown to ${timestring}`);
+				self.log('debug', `▶️ Sent Set Time to Countdown to ${timestring}`);
 			},
 		},
 
@@ -223,7 +223,7 @@ module.exports = function (self) {
 				}
 
 				self.socket.emit('set options', {'yellowAt': self.getVariableValue('yellowTime'), "redAt": self.getVariableValue('orangeTime'), "flashAt": self.getVariableValue('redTime'), 'slideControls': myControls});
-				self.log('info', `▶️ Sent set options: {slideControls:${myControls}}`);
+				self.log('debug', `▶️ Sent set options: {slideControls:${myControls}}`);
 			},
 		},
 
@@ -241,7 +241,7 @@ module.exports = function (self) {
 					self.socket.emit('next back', {"next":false,"back":false, "slideNumber": newSlideNumber});
 				}, 200); 
 
-				self.log('info', `▶️ Sent Next Slide command (slide now ${newSlideNumber})`)
+				self.log('debug', `▶️ Sent Next Slide command (slide now ${newSlideNumber})`)
 				// update slideNumber variable
 				self.setVariableValues({
 					slideNumber: newSlideNumber,
@@ -265,7 +265,7 @@ module.exports = function (self) {
 					self.socket.emit('next back', {"next":false,"back":false, "slideNumber": newSlideNumber});
 				}, 200); 
 				
-				self.log('info', `▶️ Sent Previous Slide command (slide now ${newSlideNumber})`)
+				self.log('debug', `▶️ Sent Previous Slide command (slide now ${newSlideNumber})`)
 				// update slideNumber variable
 				self.setVariableValues({
 					slideNumber: newSlideNumber,
